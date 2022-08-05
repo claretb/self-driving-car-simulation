@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/self-driving-car-simulation/static/css/main.073c9b0a.css",
-    "main.js": "/self-driving-car-simulation/static/js/main.d7e2c330.js",
+    "main.js": "/self-driving-car-simulation/static/js/main.1b0fcd19.js",
     "static/js/787.a1b11e4a.chunk.js": "/self-driving-car-simulation/static/js/787.a1b11e4a.chunk.js",
     "static/media/aruco-61.svg": "/self-driving-car-simulation/static/media/aruco-61.de6de0d921a2cdd7f5a061142714c8a8.svg",
     "static/media/aruco-273.svg": "/self-driving-car-simulation/static/media/aruco-273.1b95584af0d27e7af4b57b9f11648d23.svg",
@@ -9,11 +9,11 @@
     "static/media/aruco-819.svg": "/self-driving-car-simulation/static/media/aruco-819.9b21dbb56dca725027bec1e1ad6f70a7.svg",
     "index.html": "/self-driving-car-simulation/index.html",
     "main.073c9b0a.css.map": "/self-driving-car-simulation/static/css/main.073c9b0a.css.map",
-    "main.d7e2c330.js.map": "/self-driving-car-simulation/static/js/main.d7e2c330.js.map",
+    "main.1b0fcd19.js.map": "/self-driving-car-simulation/static/js/main.1b0fcd19.js.map",
     "787.a1b11e4a.chunk.js.map": "/self-driving-car-simulation/static/js/787.a1b11e4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d7e2c330.js"
+    "static/js/main.1b0fcd19.js"
   ]
 }
