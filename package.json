@@ -1,6 +1,7 @@
 {
   "name": "self-driving-car-simulation",
   "version": "0.1.0",
+  "//comment": "ADD HOMEPAGE IF ONLY DEPLOYING.",
   "homepage": "https://claretb.github.io/self-driving-car-simulation",
   "private": true,
   "dependencies": {

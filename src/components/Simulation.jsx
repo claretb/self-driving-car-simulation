@@ -22,7 +22,9 @@ export default function Simulation({dimensions}) {
           PeerService.peerID = id;
           console.log("PEER ID: " + PeerService.peerID);
           console.log("peer listener added");
+          // The URL should be changed on deployment.
           var url = "https://claretb.github.io/app-screen-detector/?peerID=" + PeerService.peerID;
+          //var url = "https://192.168.0.2:3000/?peerID=" + PeerService.peerID;
           console.log(url);
           QRCode.toDataURL(url, {
             width: dimensions ? dimensions.width - 210 : "700px",
