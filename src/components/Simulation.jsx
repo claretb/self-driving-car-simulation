@@ -25,6 +25,7 @@ export default function Simulation({dimensions}) {
           // The URL should be changed on deployment.
           var url = "https://claretb.github.io/app-screen-detector/?peerID=" + PeerService.peerID;
           //var url = "https://192.168.0.2:3000/?peerID=" + PeerService.peerID;
+          //var url = "https://172.20.10.2:3000/?peerID=" + PeerService.peerID;
           console.log(url);
           QRCode.toDataURL(url, {
             width: dimensions ? dimensions.width - 210 : "700px",
@@ -39,7 +40,7 @@ export default function Simulation({dimensions}) {
       else if (qr && PeerService.conn == null) {
         PeerService.peer.on("connection", (conn) => {
           PeerService.conn = conn;
-          console.log("conn listener added");
+          console.log("Conn listener added.");
           conn.on("data", (data) => {
             if(data == "forward") {
               sendMessage("CommandServer", "SetFromWebGL", "0|0.5");
@@ -54,7 +55,11 @@ export default function Simulation({dimensions}) {
               sendMessage("CommandServer", "SetFromWebGL", "0.5|0.5");
             }
             else {
-              console.log("The data came from the mobile phone: " + data);
+              console.log("The data came from the mobile phone:");
+              console.log(data);
+              if (data.steering) {
+                sendMessage("CommandServer", "SetFromWebGL", data.steering + "|" + data.throttle);
+              }
             }
           });
 
@@ -76,10 +81,12 @@ export default function Simulation({dimensions}) {
     // console.log("Speed: " + speed);
     // console.log("Image:" + image);
     if (PeerService.conn != null) {
-      PeerService.conn.send("\nAngel: " + angel +
-                            "\nAcceleration: " + acceleration +
-                            "\nSpeed: " + speed);
-                            //"\nImage:" + image);
+      var data = {
+        "angel" : angel,
+        "speed" : speed,
+        "acceleration" : acceleration
+      }
+      PeerService.conn.send(data);
     }
   }
   
