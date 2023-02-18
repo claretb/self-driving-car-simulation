@@ -1,3 +1,3 @@
 # How To
 
-Just go [this](https://claretb.github.io/app-screen-aruco/) link and start to have fun!
+Just go [this](https://claretb.github.io/self-driving-car-simulation) link and start to have fun!
